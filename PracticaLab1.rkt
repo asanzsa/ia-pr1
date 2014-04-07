@@ -162,7 +162,7 @@
     (if (empty? Abiertos)
         '("no hay camino") ; "camino: "
         (if (equal? (nombre_nodo actual) Destino)
-            (printf "~a~n" (list-ref actual 3)
+            (printf "~a~n" (list-ref actual 3))
             (busqueda_A_estrella 
                   actual
                   Destino 
@@ -330,27 +330,27 @@
 ; TEST
 ; ----
 ; i.e.- (encuentra_camino "Katherine" "Darwin")
-; TEST 1:(Darwin 7793/25 0.0 (Katherine - Darwin))
+; TEST 1:(Katherine - Darwin)
 (printf "TEST 1:")
 (define test1 (encuentra_camino "Katherine" "Darwin") )
 
 ; i.e.- (encuentra_camino "Darwin" "Eucla")
-; TEST 2:(Eucla 185531/50 0.0 (Darwin - Katherine - Tennant Creek - Alice Springs - Port Augusta - Eucla))
+; TEST 2:(Darwin - Katherine - Tennant Creek - Alice Springs - Port Augusta - Eucla)
 (printf "TEST 2:")
 (define test2 (encuentra_camino "Darwin" "Eucla") )
 
 ; i.e.- (encuentra_camino "Katherine" "Darwin")
-; TEST 3:(Hobart 15899/50 0.0 (Burnie - Launceston - Hobart))
+; TEST 3:Burnie - Launceston - Hobart)
 (printf "TEST 3:")
 (define test3 (encuentra_camino "Burnie" "Hobart") )
 
 ; i.e.- (encuentra_camino "Darwin" "Eucla")
-; TEST 4:(Cairns 632239/100 0.0 (Perth - Norseman - Eucla - Port Augusta - Adelaide - Narrandera - Goondiwindi - Toowoomba - Brisbane - Bundaberg - Rockhampton - Mackay - Townsville - Cairns))
+; TEST 4:(Perth - Norseman - Eucla - Port Augusta - Adelaide - Narrandera - Goondiwindi - Toowoomba - Brisbane - Bundaberg - Rockhampton - Mackay - Townsville - Cairns)
 (printf "TEST 4:")
 (define test4 (encuentra_camino "Perth" "Cairns") )
 
 ; i.e.- (encuentra_camino "Port Hedland" "Canberra")
-; TEST 5:(Canberra 533961/100 0.0 (Port Hedland - Perth - Norseman - Eucla - Port Augusta - Adelaide - Narrandera - Canberra))
+; TEST 5:(Port Hedland - Perth - Norseman - Eucla - Port Augusta - Adelaide - Narrandera - Canberra)
 (printf "TEST 5:")
 (define test5 (encuentra_camino "Port Hedland" "Canberra") )
 
