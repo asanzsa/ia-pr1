@@ -29,7 +29,7 @@
 ; Ejemplo de ejecución del programa:
 ; ---------------------------------
 ; i.e.- (encuentra_camino "Katherine" "Darwin")
-; i.e.- (encuentra_camino "Darwin" "Eucla")
+; i.e.- (encuentra_camino "Perth" "Sydney")
 
 
 ; DATOS
@@ -162,7 +162,7 @@
     (if (empty? Abiertos)
         '("no hay camino") ; "camino: "
         (if (equal? (nombre_nodo actual) Destino)
-            (printf "~a~n" actual)
+            (printf "~a~n" (list-ref actual 3)
             (busqueda_A_estrella 
                   actual
                   Destino 
